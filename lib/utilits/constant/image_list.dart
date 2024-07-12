@@ -7,5 +7,8 @@ class RImages{
   static const String line1 ="assets/product_image/Line (1).png";
   static const String line2 ="assets/product_image/Line (2).png";
   static const String line3 ="assets/product_image/Line (3).png";
+  // Pending Parcels
+  static const String cotton ="assets/vector/containerimage.png";
+  static const String fiber ="assets/vector/head.png";
 
 }

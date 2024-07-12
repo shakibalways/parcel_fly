@@ -7,4 +7,9 @@ class RTexts{
   static const String parcel5 ="504";
   static const String parcel6 ="45";
   static const String parcel7 ="29";
+  // Dasboard Text
+static const String pillow ="Exclusive Cotton Fiber Head Pillow";
+static const String sizeWieght ="Size: 34”, Weight: 2.5K";
+static const String money ="\$1254.89";
+
 }

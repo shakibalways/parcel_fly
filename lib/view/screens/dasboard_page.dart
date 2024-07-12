@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:parcel_fly_ui/global_wieght/custom_box.dart';
 import 'package:parcel_fly_ui/global_wieght/custom_container.dart';
 import 'package:parcel_fly_ui/model/list_model.dart';
 import 'package:parcel_fly_ui/utilits/constant/color_list.dart';
@@ -22,6 +23,7 @@ class _DasboardPageState extends State<DasboardPage> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -230,105 +232,30 @@ class _DasboardPageState extends State<DasboardPage> {
             const SizedBox(
               height: 15,
             ),
-            Container(
-                height: 90,
-                width: 420,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                          offset: const Offset(0, 2),
-                          color: Colors.grey.withOpacity(0.2),
-                          blurRadius: 1,
-                          spreadRadius: 2)
-                    ]),
-                child: Row(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset("assets/vector/containerimage.png"),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Exclusive Cotton Fiber Head Pillow",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "Size: 34”, Weight: 2.5K",
-                          style: TextStyle(color: Color(0xff6A7189)),
-                        ),
-                        Text("\$1254.89",
-                            style: TextStyle(color: Color(0xff6A7189)))
-                      ],
-                    )
-                  ],
-                )),
+            CustomBox(
+              height: 90,
+              width: 420,
+              image: RImages.cotton,
+              text0: RTexts.pillow,
+              text1: RTexts.sizeWieght,
+              text2: RTexts.money,
+            ),
             const SizedBox(
               height: 10,
             ),
-            Container(
+            CustomBox(
               height: 90,
               width: 420,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        offset: const Offset(0, 2),
-                        color: Colors.grey.withOpacity(0.2),
-                        blurRadius: 1,
-                        spreadRadius: 2)
-                  ]),
-              child: Row(
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Image.asset("assets/vector/head.png"),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Exclusive Cotton Fiber Head Pillow",
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "Size: 34”, Weight: 2.5K",
-                        style: TextStyle(color: Color(0xff6A7189)),
-                      ),
-                      Text("\$1254.89",
-                          style: TextStyle(color: Color(0xff6A7189)))
-                    ],
-                  )
-                ],
-              ),
+              image: RImages.fiber,
+              text0: RTexts.pillow,
+              text1: RTexts.sizeWieght,
+              text2: RTexts.money,
             ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-
           type: BottomNavigationBarType.fixed,
           showUnselectedLabels: true,
           items: [
@@ -341,9 +268,9 @@ class _DasboardPageState extends State<DasboardPage> {
                 label: "Payment",
                 backgroundColor: Colors.white),
             BottomNavigationBarItem(
-                icon: Image.asset("assets/bottom_navigator/mouse.png"),
-                label: "Parcel",
-              ),
+              icon: Image.asset("assets/bottom_navigator/mouse.png"),
+              label: "Parcel",
+            ),
             BottomNavigationBarItem(
                 icon: Image.asset("assets/bottom_navigator/user.png"),
                 label: "Profile",

@@ -13,6 +13,7 @@ class CustomContainer extends StatelessWidget {
   final Color color;
 
 
+
   const CustomContainer({super.key, required this.image, required this.images, required this.text, required this.texts, required this.color});
 
   @override
